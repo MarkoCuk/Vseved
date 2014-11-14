@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="adf3dea463a544f8b21ed2c06b90e9ea" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolProjectModel.AspNetRoles" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolProjectModel.AspNetUserClaims" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolProjectModel.AspNetUserLogins" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolProjectModel.AspNetUsers" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolProjectModel.Class" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolProjectModel.Quiz" Width="1.5" PointX="9.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolProjectModel.Subject" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="SchoolProjectModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolProjectModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolProjectModel.FK_Subject_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolProjectModel.FK_Quiz_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolProjectModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolProjectModel.relStudents" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SchoolProjectModel.WorkTask" Width="1.5" PointX="12" PointY="6.75" />
+        <AssociationConnector Association="SchoolProjectModel.FK_Task_Quiz" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

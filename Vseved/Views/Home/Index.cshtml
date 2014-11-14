@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Welcome!</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (!String.IsNullOrEmpty(ViewBag.Administrator))
+        {
+            <p class="lead">You are an Administrator</p>
+        }
+        if (!String.IsNullOrEmpty(ViewBag.Teacher))
+        {
+            <p class="lead">You are a Teacher</p>
+        }
+        if (!String.IsNullOrEmpty(ViewBag.Student))
+        {
+            <p class="lead">You are a Student</p>
+        }
+    }
+    else
+    {
+        <p class="lead">You are not logged in</p>
+    }
+</div>

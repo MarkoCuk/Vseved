@@ -1,0 +1,27 @@
+﻿@model List<Vseved.Models.UserRoles>
+@{
+    ViewBag.Title = "Home Page";
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Usernames</th>
+            <th>Roles</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Vseved.Models.UserRoles user in Model)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.Role</td>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>

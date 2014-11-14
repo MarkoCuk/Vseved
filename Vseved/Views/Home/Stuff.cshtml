@@ -1,0 +1,40 @@
+﻿@using Vseved.Models
+@model transfer
+@{
+    ViewBag.Title = "Stuff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Stuff</h2>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Right</button>
+</div>
+
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <strong>@Model.beseda</strong> @Model.stevilka
+</div>
+
+@Html.TextBoxFor(m => m.beseda, new { @class = "form-control" })
+@Html.TextBoxFor(m => m.stevilka, new { @class = "form-control" })
+
+<div class="btn-group">
+    @foreach (var item in Model.seznam)
+    {
+        if (item.Contains("2"))
+        {
+            <button type="button" class="btn btn-default btn-primary">@item</button>
+        }
+        else
+        {
+            <button type="button" class="btn btn-default">@item</button>
+        }
+
+    }
+</div>
+
+@ViewBag.Message
+
